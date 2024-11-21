@@ -68,7 +68,7 @@ def google_login():
     # Get Google's provider configuration
     google_provider_cfg = requests.get(GOOGLE_DISCOVERY_URL).json()
     authorization_endpoint = google_provider_cfg["authorization_endpoint"]
-
+    
     # Build the authorization URL
     request_uri = client.prepare_request_uri(
         authorization_endpoint,
